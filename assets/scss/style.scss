@@ -1,0 +1,101 @@
+@import 'variables';
+
+/* Global Settings */
+html,
+body {
+    min-height: 100%;
+    height: 100%;
+    font-size: 16px;
+    background-color: #0d0d0e;
+    position: relative;
+}
+
+a {
+    text-decoration: none!important;
+    color: $second-color;
+    transition: all .5s ease-in-out;
+
+    &:hover {
+        color: darken( $second-color, 15 );
+    }
+}
+
+p {
+    margin: 0 0 15px;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* Footer */
+footer#footer_bot {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+
+    div.logo_wraps {
+        text-align: center;
+        margin: 0 0 20px;
+
+        a {
+            margin-right: 10px;
+
+            &:last-of-type {
+                margin-right: 0;
+            }
+        }
+
+        img {
+            height: 35px;
+            display: inline-block;
+            width: 75px;
+            margin-right: 10px;
+            opacity: 0.5;
+            transition: opacity .4s ease;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    p.info_msg {
+        margin: 0;
+        color: $white;
+        font-size: 13px;
+        text-transform: uppercase;
+
+        a.email {
+            position: relative;
+
+            &::after {
+                content: '';
+                bottom: -3px;
+                left: 0;
+                height: 1px;
+                width: 100%;
+                background-color: $second-color;
+                position: absolute;
+                transition: all .5s ease-in-out;
+            }
+
+            &:hover {
+                &::after {
+                    background-color: darken( $second-color, 15 );
+                }
+            }
+        }
+    }
+}
+
+/* Page Settings */
+div#top_header {
+    width: 100%;
+    height: 150px;
+    background-image: url('../imgs/background-img.png');
+    background-position: top;
+    background-repeat: repeat-x;
+}
