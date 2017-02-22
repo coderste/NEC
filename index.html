@@ -24,7 +24,50 @@
     <!-- Base Elements -->
     <main id="page_content" role="main">
         <div class="container">
-
+            <div class="page_header">
+                <h1>Welcome!</h1>
+                <h4>Your <span class="highlight">VIP invitation</span> to our <span class="highlight">Christmas Party 2016</span></h4>
+            </div>
+            <div class="page_content">
+                <!-- Start the form -->
+                <div class="start_the_form">
+                    <button class="btn start_form_btn next_item">Fill out the form!</button>
+                </div>
+                <!-- Forms -->
+                <div class="form_wrapper" style="display: none;">
+                    <form action="index.php" class="user_form">
+                        <legend class="form_header">
+                            <h6>Fields marked with an <span class="highlight">*</span> are required</h6>
+                        </legend>
+                        <div class="details_wrapper user_details form_elements">
+                            <h4>Your <span class="highlight">Details</span></h4>
+                            <div class="row">
+                                <div class="input_wrap one-third column">
+                                    <input type="text" class="input_field" name="title" placeholder="Title *" />
+                                </div>
+                                <div class="input_wrap one-third column">
+                                    <input type="text" class="input_field" name="first_name" placeholder="First Name *" />
+                                </div>
+                                <div class="input_wrap one-third column">
+                                    <input type="text" class="input_field" name="surname" placeholder="Surname *" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input_wrap one-half column">
+                                    <input type="email" class="input_field" name="email_address" placeholder="E-Mail Address *" />
+                                </div>
+                                <div class="input_wrap one-half column">
+                                    <input type="text" class="input_field" name="company_name" placeholder="Company Name *" />
+                                </div>
+                            </div>
+                            <button type="button" class="btn next_form">Next</button>
+                        </div>
+                        <div class="attend_event form_elements" style="display: none;">
+                            <h4>Are you able to attend our <span class="highlight">Christmas Party?</span></h4>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </main>
 
@@ -44,9 +87,10 @@
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
 
     <!-- Core File -->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js?ver=1.2"></script>
 
 </body>
 </html>

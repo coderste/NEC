@@ -1,1 +1,1 @@
-jQuery(document).ready(function(e){});
+jQuery(document).ready(function(e){var i=e(".start_the_form"),t=e(".start_form_btn"),r=e(".form_wrapper"),n=(e(".input_field"),e(".form_elements"),e(".next_form"));e(t).click(function(){e(i).hide("slide",{direction:"left"},1500),e(i).is(":visible")&&e(r).show("slide",{direction:"right"},2e3)}),e(n).click(function(){var i=e(this).parent();e(i).hide("slide",{direction:"left"},1500),e(i).next(".form_elements").show("slide",{direction:"right"},2e3)})});
