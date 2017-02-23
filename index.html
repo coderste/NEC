@@ -9,8 +9,7 @@
     <title>NEC Christmas Landing Page</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="assets/css/normalize.css" />
-    <link rel="stylesheet" href="assets/css/skeleton.css" />
+    <link rel="stylesheet" href="assets/css/boostrap.css" />
     <link rel="stylesheet" href="assets/css/style.css" />
 
     <!-- FontAwesome -->
@@ -30,67 +29,161 @@
             </div>
             <div class="page_content">
                 <!-- Start the form -->
-                <div class="start_the_form">
-                    <button class="btn start_form_btn next_item">Fill out the form!</button>
-                </div>
-                <!-- Forms -->
-                <div class="form_wrapper" style="display: none;">
-                    <form action="index.php" class="user_form">
-                        <legend class="form_header">
-                            <h6>Fields marked with an <span class="highlight">*</span> are required</h6>
-                        </legend>
-                        <div class="details_wrapper user_details form_elements">
-                            <h4>Your <span class="highlight">Details</span></h4>
-                            <div class="row">
-                                <div class="input_wrap one-third column">
-                                    <input type="text" class="input_field" name="title" placeholder="Title *" />
-                                </div>
-                                <div class="input_wrap one-third column">
-                                    <input type="text" class="input_field" name="first_name" placeholder="First Name *" />
-                                </div>
-                                <div class="input_wrap one-third column">
-                                    <input type="text" class="input_field" name="surname" placeholder="Surname *" />
+                <form action="" class="user_form">
+                    <ul class="progress_bar">
+                        <li class="current active">Your Details</li>
+                        <li>Can you attend?</li>
+                        <li>Dietary Requirements</li>
+                        <li>Hotel Accommodation</li>
+                        <li>Parking</li>
+                        <li>Bring a Guest</li>
+                    </ul>
+                    <fieldset class="field_wrap">
+                        <h4>Your <span class="highlight">Details</span></h4>
+                        <div class="row">
+                            <div class="input_field col-md-4 col-sm-12">
+                                <input type="text" name="title" class="input_field" placeholder="Title *" />
+                            </div>
+                            <div class="input_field col-md-4 col-sm-12">
+                                <input type="text" name="first_name" class="input_field" placeholder="First Name *" />
+                            </div>
+                            <div class="input_field col-md-4 col-sm-12">
+                                <input type="text" name="surname" class="input_field" placeholder="Surname *" />
+                            </div>
+                            <div class="input_field col-md-6 col-sm-12">
+                                <input type="email" name="email_address" class="input_field" placeholder="E-Mail Address *" />
+                            </div>
+                            <div class="input_field col-md-6 col-sm-12">
+                                <input type="text" name="company_name" class="input_field" placeholder="Company Name *" />
+                            </div>
+                        </div>
+                        <button type="button" class="btn next_action">Next</button>
+                    </fieldset>
+                    <fieldset class="field_wrap">
+                        <h4>Are you able to attend our <span class="highlight">Christmas Party?</span></h4>
+                        <div class="control_field input_field col-sm-6">
+                            <div class="control clearfix">
+                                <input type="radio" name="attend_event" id="yes" value="yes" />
+                                <label for="yes">Yes</label>
+                            </div>
+                        </div>
+                        <div class="control_field input_field col-sm-6">
+                            <div class="control clearfix">
+                                <input type="radio" name="attend_event" id="no" value="no" />
+                                <label for="no">No</label>
+                            </div>
+                        </div>
+                        <button type="button" class="btn previous_action">Previous</button>
+                        <button type="button" class="btn next_action">Next</button>
+                    </fieldset>
+                    <fieldset class="field_wrap">
+                        <h4>Do you have any <span class="highlight">Dietary Requirements?</span></h4>
+                        <div class="row">
+                            <div class="control_field input_field col-sm-6">
+                                <div class="control clearfix">
+                                    <input type="radio" name="diet" id="diet_yes" value="yes" />
+                                    <label for="diet_yes">Yes</label>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="input_wrap one-half column">
-                                    <input type="email" class="input_field" name="email_address" placeholder="E-Mail Address *" />
-                                </div>
-                                <div class="input_wrap one-half column">
-                                    <input type="text" class="input_field" name="company_name" placeholder="Company Name *" />
+                            <div class="control_field input_field col-sm-6">
+                                <div class="control clearfix">
+                                    <input type="radio" name="diet" id="diet_no" value="no" />
+                                    <label for="diet_no">No</label>
                                 </div>
                             </div>
-                            <button type="button" class="btn next_form">Next</button>
+                            <div id="diet_options">
+                                <div id="extra_info" class="col-sm-12"></div>
+                            </div>
                         </div>
-                        <div class="attend_event form_elements" style="display: none;">
-                            <h4>Are you able to attend our <span class="highlight">Christmas Party?</span></h4>
+                        <button type="button" class="btn previous_action">Previous</button>
+                        <button type="button" class="btn next_action">Next</button>
+                    </fieldset>
+                    <fieldset class="field_wrap">
+                        <h4>Do you require <span class="highlight">Hotel Accommodation</span> for the night?</h4>
+                        <div class="row">
+                            <div class="control_field input_field col-sm-6">
+                                <div class="control clearfix">
+                                    <input type="radio" name="hotel" id="hotel_yes" value="yes" />
+                                    <label for="hotel_yes">Yes</label>
+                                </div>
+                            </div>
+                            <div class="control_field input_field col-sm-6">
+                                <div class="control clearfix">
+                                    <input type="radio" name="hotel" id="hotel_no" value="no" />
+                                    <label for="hotel_no">No</label>
+                                </div>
+                            </div>
                         </div>
-                    </form>
-                </div>
+                        <button type="button" class="btn previous_action">Previous</button>
+                        <button type="button" class="btn next_action">Next</button>
+                    </fieldset>
+                    <fieldset class="field_wrap">
+                        <h4>Do you require <span class="highlight">Parking</span> at the NEC</h4>
+                        <div class="row">
+                            <div class="control_field input_field col-sm-6">
+                                <div class="control clearfix">
+                                    <input type="radio" name="parking" id="parking_yes" value="yes" />
+                                    <label for="parking_yes">Yes</label>
+                                </div>
+                            </div>
+                            <div class="control_field input_field col-sm-6">
+                                <div class="control clearfix">
+                                    <input type="radio" name="parking" id="parking_no" value="no" />
+                                    <label for="parking_no">No</label>
+                                </div>
+                            </div>
+                            <div id="reg_plate"></div>
+                        </div>
+                        <button type="button" class="btn previous_action">Previous</button>
+                        <button type="button" class="btn next_action">Next</button>
+                    </fieldset>
+                    <fieldset class="field_wrap">
+                        <h4>Will you bring a <span class="highlight">Guest?</span></h4>
+                        <div class="row">
+                            <div class="control_field input_field col-sm-6">
+                                <div class="control clearfix">
+                                    <input type="radio" name="guest" id="guest_yes" value="yes" />
+                                    <label for="guest_yes">Yes</label>
+                                </div>
+                            </div>
+                            <div class="control_field input_field col-sm-6">
+                                <div class="control clearfix">
+                                    <input type="radio" name="guest" id="guest_no" value="no" />
+                                    <label for="guest_no">No</label>
+                                </div>
+                            </div>
+                            <div id="guest_list" class="clearfix">
+                            </div>
+                        </div>
+                        <button type="button" class="btn previous_action">Previous</button>
+                        <button type="submit" class="btn next_action submit_action">Submit</button>
+                    </fieldset>
+                    <fieldset>
+                        <h4 style="text-align: center;">Thank you for filling out the <span class="highlight">Form!</span></h4>
+                    </fieldset>
+                </form>
             </div>
         </div>
     </main>
 
     <!-- Footer -->
     <footer id="footer_bot">
-        <div class="container">
-            <div class="logo_wraps">
-                <div class="logos">
-                    <a href="http://www.theicc.co.uk/" target="_blank"><img src="assets/imgs/logos/icc-logo.svg" alt="" class="icc-logo" /></a>
-                    <a href="http://www.thenec.co.uk/" target="_blank"><img src="assets/imgs/logos/nec-logo.svg" alt="" class="nec-logo" /></a>
-                    <a href="http://www.thevoxcentre.co.uk/" target="_blank"><img src="assets/imgs/logos/vox-logo.svg" alt="" class="vox-logo" /></a>
-                </div>
+        <div class="logo_wraps">
+            <div class="logos">
+                <img src="assets/imgs/logos/icc-logo.svg" alt="" class="icc-logo" />
+                <img src="assets/imgs/logos/nec-logo.svg" alt="" class="nec-logo" />
+                <img src="assets/imgs/logos/vox-logo.svg" alt="" class="vox-logo" />
             </div>
-            <p class="info_msg">If you have any questions please E-Mail <a href="mailto:christmas@thenec.co.uk" class="email">christmas@thenec.co.uk.</a> Thanks</p>
         </div>
+        <p class="info_msg">If you have any questions please E-Mail <a href="mailto:christmas@thenec.co.uk" class="email">christmas@thenec.co.uk.</a> Thanks</p>
     </footer>
 
     <!-- jQuery -->
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 
     <!-- Core File -->
-    <script src="assets/js/main.js?ver=1.2"></script>
+    <script src="assets/js/main.js?ver=2.0"></script>
 
 </body>
 </html>

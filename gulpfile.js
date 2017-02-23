@@ -32,7 +32,6 @@ gulp.task( 'scss', function( cb ) {
 gulp.task( 'scripts', function( cb ) {
     pump( [
         gulp.src( 'assets/js/core/*.js' ),
-        uglify(),
         gulp.dest( 'assets/js' )
     ],
     cb
